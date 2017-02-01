@@ -1,0 +1,22 @@
+ jfairbanks6@LPATLICLJFAIR6  ~/P/gabb 
+ ❯ julia5 tracediff.jl 1600 8                                                                                                                  [16:57:32]
+(n,ef) = (1000,8)
+median(@benchmark(tri(A))).time = 2.98337478e8
+median(@benchmark(tri(B))).time = 3.28349385e8
+median(@benchmark(triupdate(A,Δ))).time = 1.764750205e8
+median(@benchmark(triupdate2(A,Δ))).time = 1.56669435e8
+(n,ef) = (10000,8)
+median(@benchmark(tri(A))).time = 2.11533112e8
+median(@benchmark(tri(B))).time = 3.58489901e8
+median(@benchmark(triupdate(A,Δ))).time = 1.781437035e8
+median(@benchmark(triupdate2(A,Δ))).time = 1.59610782e8
+(n,ef) = (1000,16)
+median(@benchmark(tri(A))).time = 2.181399125e8
+median(@benchmark(tri(B))).time = 3.201920945e8
+median(@benchmark(triupdate(A,Δ))).time = 1.760360565e8
+median(@benchmark(triupdate2(A,Δ))).time = 1.60914303e8
+(n,ef) = (10000,16)
+median(@benchmark(tri(A))).time = 2.1950225e8
+median(@benchmark(tri(B))).time = 2.90169892e8
+median(@benchmark(triupdate(A,Δ))).time = 1.72738822e8
+median(@benchmark(triupdate2(A,Δ))).time = 1.76652322e8
